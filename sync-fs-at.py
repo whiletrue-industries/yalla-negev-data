@@ -189,7 +189,7 @@ def write_to_excel(surveys, sheets):
     wb.save(output_filename)
 
     # Upload the output file to Google Drive, using credentials in GOOGLE_APPLICATION_CREDENTIALS, using google-api-python-client
-    DRIVE_FOLDER = 'https://drive.google.com/drive/folders/1JKJllK5O248EEVnOBkG28qyxr9kNDkZ-'
+    DRIVE_FOLDER = os.getenv('DRIVE_FOLDER_ID')  # Use environment variable for Drive folder ID
 
     # Authenticate and create the Drive API client
     creds = None

@@ -26,6 +26,7 @@ jobs:
     - name: Run sync-fs-at.py
       env:
         GOOGLE_APPLICATION_CREDENTIALS_CONTENT: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
       run: |        
         echo "$GOOGLE_APPLICATION_CREDENTIALS_CONTENT" > creds.json
         GOOGLE_APPLICATION_CREDENTIALS=creds.json python sync-fs-at.py
