@@ -1,0 +1,3 @@
+google-cloud-firestore
+openpyxl
+google-api-python-client
